@@ -1,0 +1,584 @@
+@charset "utf-8";
+
+@function pxTorem($px){
+    @return ( $px / 100 ) * 1rem; 
+}
+$border: 1px solid #eee;
+@mixin intiBox($width,$height){
+    @if $width == 0 {
+        width: 100%;
+
+    }
+    @else{
+        width: pxTorem($width);
+    }
+    @if $height == 0{
+        height: auto;
+    }@else{
+        height: pxTorem($height);
+    }
+}
+@mixin MyPadding($top,$right,$bottom,$left){
+    @if $top > 0 {
+        padding-top:  pxTorem($top);
+    }
+    @if $right > 0 {
+        padding-right:  pxTorem($right);
+    }
+    @if $bottom > 0 {
+        padding-bottom:  pxTorem($bottom);
+    }
+    @if $left > 0 {
+        padding-left:  pxTorem($left);
+    }
+}
+html{
+    font-size: 26.67vw;
+    height: 100%;
+    
+}
+
+
+body{
+    height: 100%;
+    background-color: #edf0f5;
+    position: relative;
+}
+header{
+    @include intiBox(0,44);
+    background: white;
+    @include MyPadding(0,15,0,15);
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    .back{
+        display: block;
+        float: left;
+        @include intiBox(44,44);
+        background: url(../img/back.png) no-repeat left center;
+        background-size: 38% 38%;
+    }
+    h3{
+        float: left;
+        font-size: pxTorem(18) ;
+        text-align: center;
+        line-height: pxTorem(44);
+        width: 72.8%;
+
+    }
+    h3+p{
+        float: right;
+        font-size: pxTorem(30) ;
+        line-height: pxTorem(26);
+        letter-spacing: pxTorem(2);
+        color: #23beae;
+    }
+}
+.subMenu{
+    @include intiBox(132,146);
+   background-color: rgb(67,73,80);
+   border-radius: pxTorem(5);
+   position: absolute;
+   right:  pxTorem(5);
+   top: pxTorem(44);
+   box-sizing: border-box;
+   padding-left:  pxTorem(15);
+   padding-top:  pxTorem(5);
+   display: none;
+   z-index: 999;
+    a{
+        @include intiBox(0,45);
+        color: #ccc;
+        display: block;
+        i{
+            display: block;
+            float: left;
+            font-size:pxTorem(20);
+            line-height: pxTorem(45);
+        }
+        p{
+            float: left;
+            font-size: pxTorem(18); 
+            line-height: pxTorem(45);
+            text-indent: pxTorem(8); 
+        }
+    }
+}
+.subMenu::before{
+    position: absolute;
+    right: pxTorem(10);
+    top:  pxTorem(-9);
+    content: "";
+    border-style: solid;
+    border-color: #434950 transparent;
+    border-width: 0 9px 9px;
+}
+/*轮播图*/
+.gellay{
+    @include intiBox(0,188);
+    // background-color: aquamarine;
+    overflow: hidden;
+}
+.swiper-container{
+    @include intiBox(0,188);
+    overflow: hidden;
+    .swiper-slide{
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+/*商品标题区*/
+.product_tit{
+    width: 97.334%;
+    height: pxTorem(92);
+    background-color:white;
+    box-sizing: border-box;
+    margin: 0 auto;
+    @include MyPadding(5,6,0,6);
+    border-radius: pxTorem(10);
+    position: relative;
+    top: pxTorem(-16);
+    border-bottom: 1px solid #c3c4c7;
+    border-right: 1px solid #c3c4c7;
+    z-index:100;
+
+    h3{
+        font-size:  pxTorem(14);
+        color: #333;
+        line-height:  pxTorem(23);
+        font-weight: 100;
+    }
+   
+}
+.product_moreImg{
+    @include intiBox(0,60); 
+    background-color: rgba(0, 0, 0,.3); 
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: pxTorem(172);
+    z-index:99;
+
+    // left: pxTorem(-5);
+    span{
+        font-size: pxTorem(10);
+        color: white;
+        line-height: pxTorem(16);
+    }
+    span:first-of-type{
+        margin-left: pxTorem(14);
+    }
+    span:nth-of-type(2){
+        margin-left: pxTorem(204);
+    }
+    span:last-of-type{
+        background-color: rgba(0, 0, 0,.4); 
+        line-height: pxTorem(22);
+    }
+}
+.product_price{
+    @include intiBox(0,0);
+    box-sizing: border-box;
+    overflow: hidden;
+    @include MyPadding(8, 21, 0, 21);
+    p{
+        @include intiBox(32,13);
+        border: #7dcffa 1px solid;
+        color:#7dcffa;
+        line-height: pxTorem(13);
+        text-align: center;
+        font-size: pxTorem(10);
+        margin-top: pxTorem(4);
+        float: left;
+    }
+    div{
+        float: right;
+        color: #ff5346;
+        display: flex;
+        align-items: flex-end;
+        span:first-of-type{
+            font-size: pxTorem(12);
+        } 
+        span:nth-of-type(2){
+            font-size: pxTorem(20);
+            margin-right:pxTorem(6); 
+            margin-left:pxTorem(5); 
+            font-weight: 600;
+        } 
+        span:last-of-type{
+            font-size: pxTorem(12);
+            color: #999;
+        }
+    }
+}
+/*秒杀*/
+.product_miaosha{
+    margin-top: pxTorem(-6);
+    @include intiBox(0,118 );
+    background-color: white;
+    margin-bottom:  pxTorem(10);
+}
+.ms_time{
+    @include intiBox(0,44);
+    border-bottom: $border;
+    em{
+        display: block;
+        float: left;
+        @include intiBox(42,44);
+        background: url(../img/clock.png) no-repeat center center;
+        background-size: 40% 40%;
+    }
+    span{
+        display: block;
+        float: left;
+        line-height: pxTorem(44);
+        margin-right: 40%;
+        font-size: pxTorem(16);
+        color: #ff5345;
+        font-weight: 600;
+    }
+    p{
+        float: left;
+        line-height: pxTorem(44);
+        font-size: pxTorem(12);
+        color: #333;
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+        text-align: center;
+        i{
+            display: block;
+            @include intiBox(17,16 );
+            background-color: #333; 
+            color: #fff;
+            line-height: pxTorem(16); 
+            font-size: pxTorem(10);
+            font-style: normal;
+            margin-top: pxTorem(14);
+            margin-left: pxTorem(4);
+        }
+
+        
+    }
+}
+.order_hotel{
+    @include intiBox(0,73);
+    
+}
+.order_hotel_left{
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: pxTorem(14);
+    padding-left: pxTorem(34);
+    background: url(../img/build.png) no-repeat;
+    background-size: .16rem .13rem;
+    background-position: .12rem .15rem;
+    p{
+        color:#333;
+        font-size: pxTorem(12);
+        span{
+            font-size: pxTorem(14);
+            font-weight: 600;
+        }
+    }
+    p:first-of-type{
+        padding-top: pxTorem(2);
+    }
+    p:last-of-type{
+        padding-top: pxTorem(5);
+    }
+}
+.order_hotel_right{
+    float: right;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: pxTorem(8);
+    padding-right: pxTorem(20);
+    // background: salmon;
+    p:first-of-type{
+        color:#999;
+        font-size: pxTorem(10);
+        span{
+            color:#ff5345;  
+        }
+        em{
+            font-size: pxTorem(18); 
+            color:#ff5345;  
+            font-style:normal;  
+            margin: 0 .03rem;
+            font-weight: 600;
+            margin-bottom:pxTorem(10);  
+        }
+    }
+    p:last-of-type{
+        @include intiBox(70,30);
+        border-radius:  pxTorem(4); 
+        font-size:  pxTorem(10); 
+        color: white;
+        background-color: #ff5346;
+        line-height: pxTorem(30);
+        text-align: center; 
+    }
+
+}
+/*精选酒店*/
+.hotel_taocan{
+    @include intiBox(0,109);
+    box-sizing: border-box;
+    padding-left: pxTorem(15);
+    background-color: white;
+    margin-bottom: pxTorem(10);
+    h3{
+        @include intiBox(0,44);
+        border-bottom: $border;
+        background: url(../img/jingxuan.png) no-repeat left center;
+        background-size: .18rem .18rem;
+        font-size: pxTorem(16);
+        text-indent: pxTorem(29);
+        color: #333;
+        line-height: pxTorem(44);
+    }
+}
+
+.other_day{
+    @include intiBox(0,64 );
+    box-sizing: border-box;
+    padding-top: pxTorem(10);
+        li{
+        float: left;
+        border: 1px solid #e4e4e4;
+        @include intiBox(68,42 );
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: pxTorem(5);
+        margin-right: pxTorem(5);
+        p:first-of-type{
+            font-size: pxTorem(12);
+            color: #333;
+        }
+        p:last-of-type{
+            font-size: pxTorem(10);
+            color: #ff5345;
+            float: left;
+        }
+        span{
+            font-size: pxTorem(10);
+            color: #999; 
+            float: left;
+            padding-left: pxTorem(2);
+        }
+    }
+    li:last-of-type{
+        margin-right: 0;
+    }
+    div{
+        @include intiBox(64,58);
+        border-left: .02rem solid #e4e4e4;
+        border-top: 1px solid #e4e4e4;
+        margin-top: pxTorem(-11);
+        float: left;
+        box-sizing: border-box;
+        padding-top: pxTorem(14);
+        padding-left: pxTorem(10);
+        p{
+            text-align: center;
+            font-size: pxTorem(14);
+            color: #999;
+            @include intiBox(28,32);
+            float: left;
+            margin-right: pxTorem(4);
+        }
+        i{
+            float: left;
+            display: block;
+            @include intiBox(18,38);
+            padding-top: pxTorem(6);
+            color: #999;
+            font-size: pxTorem(18);
+        }
+    }
+}
+.tour_taocan{
+    width: 97.334%;
+    height: auto;
+    background-color:white;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: pxTorem(10);
+    position: relative;
+    border:1px solid #d8dbdf;
+    overflow:hidden;
+    margin-bottom: pxTorem(10);
+}
+.tour_taocan_left{
+    color:#333;
+    float: left;
+    box-sizing: border-box;
+    @include MyPadding(30,0 ,10, 14 );
+    @include intiBox(234, 0);
+    margin-right: pxTorem(6);
+    h3{
+        @include intiBox(38, 21);
+        background:url(../img/tour_taocan_tip.png) no-repeat left center;
+        background-size: cover;
+        font-size: pxTorem(12);
+        text-align: center;
+        line-height: pxTorem(21);
+        color:white;
+        position: absolute;
+        left:pxTorem(15);
+        top:pxTorem(-3);
+    }
+    p:first-of-type{
+        font-size: pxTorem(12);
+  
+        span{
+            font-size: pxTorem(14);
+            font-weight: 600;
+        }        
+    }
+    p:nth-of-type(2){
+        font-size: pxTorem(10);
+        margin-bottom: pxTorem(8);
+        margin-top: pxTorem(8);
+    }
+    p:nth-of-type(3){
+        font-size: pxTorem(10);
+        margin-bottom: pxTorem(4);
+        span{
+            font-size: pxTorem(12);
+            font-weight: 600;
+        }        
+    }
+    p:last-of-type{
+        line-height: 18px;
+        font-size: pxTorem(12);
+    }
+}
+.tour_taocan_right{
+    width: pxTorem(122);
+    float: left;
+    box-sizing: border-box;
+    padding-top: pxTorem(60);
+    // padding-left: pxTorem(4);
+    // i{
+    //     display: block;
+    //     @include intiBox(42, 42);
+    //     border-radius: 50%;
+    //     background-color: #39c4b6;
+    //     color: white;
+    //     text-align: center;
+    //     line-height: pxTorem(42);
+    //     margin-left: pxTorem(50);
+    // }
+    p{
+        font-size: pxTorem(10);
+        color: #333;
+        margin-bottom: pxTorem(6);
+        em{
+            color: #ff5345;
+            margin-right: pxTorem(4);
+            font-style: normal;
+            font-size: pxTorem(20);
+            font-weight: 600;
+        }
+        span{
+            color: #ff5345;
+
+        }
+    }
+    b{
+        @include intiBox(70, 30);
+        line-height: pxTorem(30);
+        text-align: center;
+        font-size: pxTorem(12);
+        display: block;
+        background-color: #ff5345;
+        border-radius: pxTorem(6);
+    }
+}
+.tour_dingzhi{
+    @include intiBox(0,70 );
+    background-color: white;
+    box-sizing: border-box;
+    padding-left: pxTorem(14);
+    padding-right: pxTorem(14);
+    background-image: url(../img/gxh.png) ;
+    background-repeat: no-repeat;
+    background-size: 2.33rem .13rem;
+    background-position: .43rem .41rem;
+    margin-bottom: pxTorem(10);
+    h3{
+        font-size: pxTorem(16);
+        float: left;
+        background: url(../img/star1.png) no-repeat left center;
+        background-size: pxTorem(18);
+        text-indent: pxTorem(24);
+        margin-top: pxTorem(14);
+    }
+    p{
+        float: right;
+        font-size: pxTorem(14);
+        border-radius: pxTorem(12);
+        background-color: #2ed7b7;
+        color: white;
+        @include intiBox(70,32 );
+        text-align: center;
+        line-height: pxTorem(32);
+        margin-top: pxTorem(20);
+    }
+}
+.tour_detail{
+    width: 100%;
+    background-color: white;
+}
+.title{
+    @include intiBox(0,39);
+    border: $border;
+    position: relative;
+    
+    a{
+        // width: 25%;
+        display: block;
+        height: pxTorem(37);
+        // position: absolute;
+        line-height: pxTorem(37);
+        text-align: center;
+        float: left;
+        color: #666;
+        font-size: pxTorem(14);
+        padding:0 .03rem;
+        margin: 0 3.9%;
+    }
+    
+}
+.title_fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+    p:first-of-type{
+        border-bottom: .02rem solid #2ed4b6;
+    }
+}
+.title .title_choosed{
+    border-bottom: .02rem solid #2ed4b6;
+}
+.product_con{
+    @include intiBox(0,0);
+    box-sizing: border-box;
+    padding-top: pxTorem(20);
+    padding-left: pxTorem(15);
+
+    li{
+        width: 100%;
+        font-size: pxTorem(12);
+        p{
+            line-height: pxTorem(20);
+        }
+
+    }
+}

@@ -1,0 +1,647 @@
+@charset "UTF-8";
+html {
+  font-size: 26.67vw;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: #f2f4f7;
+  display: flex;
+  flex-direction: column;
+  font-family: arial,sans-serif;
+  position: relative;
+}
+
+/*选择城市界面*/
+.cityPage {
+  width: 100%;
+  background-color: #e0e4ec;
+  display: flex;
+  flex-direction: column;
+}
+
+.city_top {
+  width: 100%;
+  height: 100%;
+}
+
+.citysearch {
+  width: 100%;
+  height: 0.57rem;
+  padding: 0.1rem;
+  box-sizing: border-box;
+  background-color: #e0e4ec;
+  position: relative;
+  display: flex;
+}
+
+.citysearch input {
+  width: 3.1rem;
+  height: 0.39rem;
+  border-top-left-radius: 0.08rem;
+  border-bottom-left-radius: 0.08rem;
+  border: none;
+  text-indent: 0.44rem;
+  font-size: 0.14rem;
+}
+
+.citysearch input:focus ~ i {
+  display: block;
+}
+
+.citysearch input:focus ~ i ~ span {
+  color: #333;
+}
+
+.citysearch i {
+  display: block;
+  width: 0.24rem;
+  height: 0.39rem;
+  position: absolute;
+}
+
+.citysearch .icon-sousuo {
+  left: 0.2rem;
+  font-size: 0.24rem;
+  color: #c5c5c5;
+  line-height: 0.39rem;
+}
+
+.citysearch .icon-quxiao {
+  left: 2.7rem;
+  font-size: 0.24rem;
+  color: #ccc;
+  line-height: 0.39rem;
+  display: none;
+}
+
+.citysearch span {
+  float: left;
+  height: 0.39rem;
+  font-size: 0.16rem;
+  background: white;
+  text-align: center;
+  line-height: 0.39rem;
+  border-top-right-radius: 0.08rem;
+  border-bottom-right-radius: 0.08rem;
+  width: 0.48rem;
+  color: white;
+}
+
+.cityList {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  background: #e0e4ec;
+}
+
+.cityList span {
+  display: block;
+  height: 0.15rem;
+  border-bottom: 1px solid #f2f2f2;
+  background: white;
+}
+
+.cityList p {
+  font-size: 0.14rem;
+  color: #333;
+  line-height: 0.39rem;
+  height: 0.39rem;
+  text-indent: 0.08rem;
+  background: white;
+}
+
+.city_con {
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+  background-color: #e9ecf1;
+  padding-left: 0.2rem;
+  padding-right: 0.28rem;
+  box-sizing: border-box;
+}
+
+.city_tit {
+  width: 100%;
+  padding-left: 0.09rem;
+  margin-bottom: 0.07rem;
+  margin-top: 0.17rem;
+  box-sizing: border-box;
+  font-weight: 100;
+  font-size: 14px;
+  color: #777;
+}
+
+.gps {
+  height: 0.4rem;
+  color: #999;
+  font-size: 0.12rem;
+  text-indent: 0.2rem;
+  line-height: 0.4rem;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 0.05rem;
+}
+
+.cityName {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cityName p {
+  background: white;
+  border-radius: 0.08rem;
+  width: 1rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  margin-right: 0.13rem;
+  float: left;
+  font-size: 0.12rem;
+  color: #666;
+  margin-bottom: 0.12rem;
+}
+
+.cityName p:nth-child(3n) {
+  margin-right: 0;
+}
+
+.city_slide {
+  position: fixed;
+  right: 0;
+  top: 0.57rem;
+  width: 0.26rem;
+  text-align: center;
+  background: #eff1f5;
+}
+
+.city_slide a {
+  font-size: 0.12rem;
+  line-height: 0.25rem;
+  color: #50b400;
+  display: block;
+}
+
+/*首页开始*/
+.mainPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainPage header {
+  width: 100%;
+  height: 0.52rem;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.mainPage section {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cityBox {
+  float: left;
+  padding-left: 0.11rem;
+  overflow: hidden;
+}
+
+.cityBox span {
+  font-size: 0.16rem;
+  color: #3ebebf;
+  line-height: 0.5rem;
+  display: block;
+  float: left;
+  text-shadow: #3ebebf 0 0 2px;
+}
+
+.cityBox i {
+  color: #3ebebf;
+  line-height: 0.53rem;
+  font-size: 0.14rem;
+  display: block;
+  float: left;
+  padding-left: 0.05rem;
+  font-weight: 600;
+}
+
+.main_search {
+  float: left;
+  margin-left: 0.11rem;
+}
+
+.main_search p {
+  width: 2.6rem;
+  height: 0.33rem;
+  background-color: #eaedf1;
+  border-radius: 0.12rem;
+  margin-top: 0.085rem;
+  color: #93989f;
+  font-size: 0.14rem;
+}
+
+.main_search p span {
+  float: left;
+  line-height: 0.33rem;
+}
+
+.main_search i {
+  display: block;
+  line-height: 0.33rem;
+  color: #90959d;
+  float: left;
+  text-indent: 0.47rem;
+}
+
+.user {
+  float: left;
+  margin-left: 0.12rem;
+}
+
+.user i {
+  display: block;
+  line-height: 0.5rem;
+  color: #3ebebf;
+  font-size: 0.22rem;
+  text-shadow: #3ebebf 0 0 2px;
+}
+
+.gellay {
+  width: 100%;
+  height: 0.95rem;
+}
+
+.gellay .swiper-container {
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.swiper-pagination {
+  position: absolute;
+  top: 0%;
+}
+
+.swiper-pagination span {
+  background-color: white;
+}
+
+/*menu*/
+.menu, .subMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid #e4e4e4;
+  padding-top: 0.2rem;
+}
+
+.menu a, .subMenu a {
+  color: #333;
+  font-size: 0.12rem;
+}
+
+.menu img, .subMenu img {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+}
+
+.menu p, .subMenu p {
+  line-height: 0.26rem;
+  margin-bottom: 0.08rem;
+}
+
+.subMenu {
+  flex-wrap: wrap;
+  padding-left: 0.12rem;
+  padding-right: 0.12rem;
+  padding-bottom: 0.2rem;
+  box-sizing: border-box;
+  margin-bottom: 0.1rem;
+  border-bottom: none;
+}
+
+.subMenu a {
+  display: block;
+  width: 0.7rem;
+}
+
+.subMenu a img {
+  width: 0.35rem;
+  height: 0.35rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.hotsale {
+  width: 100%;
+  height: 0.8rem;
+  background: white;
+  margin-bottom: 0.1rem;
+}
+
+.hotsale a {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #e4e4e4;
+  font-size: 0.08rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  box-sizing: border-box;
+  float: left;
+}
+
+.hotsale .intro {
+  float: left;
+}
+
+.hotsale h3 {
+  font-weight: 100;
+  color: #333;
+  font-size: 0.14rem;
+  padding-top: 0.11rem;
+}
+
+.hotsale p {
+  font-size: 0.08rem;
+  width: 0.58rem;
+  height: 0.16rem;
+  border-radius: 0.06rem;
+  line-height: 0.16rem;
+  text-align: center;
+  color: #ebb73f;
+  margin-top: 0.08rem;
+  transform: scale(0.8);
+}
+
+.hotsale a:first-child p {
+  border: 1px solid #ebb73f;
+}
+
+.hotsale a:last-child p {
+  color: #ff7e60;
+  border: 1px solid #ff7e60;
+}
+
+.hotsale img {
+  float: right;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.banner {
+  width: 100%;
+  height: 0.9rem;
+  display: block;
+  background: url(../img/index_banner.jpg) no-repeat left center;
+  background-size: cover;
+  margin-bottom: 0.1rem;
+}
+
+/*热门推荐*/
+.recommand {
+  width: 100%;
+  background-color: white;
+  padding-top: 0.16rem;
+  margin-bottom: 0.1rem;
+}
+
+.recommand_top {
+  width: 100%;
+  height: 1.33rem;
+  text-align: center;
+  border-bottom: 1px solid #e4e4e4;
+  background: url(../img/fire.gif) no-repeat;
+  background-position-x: 1.34rem;
+  background-position-y: 0.02rem;
+  background-size: 0.15rem 0.19rem;
+}
+
+.recommand_top h3 {
+  width: 100%;
+  font-size: 0.16rem;
+  color: #fb5300;
+}
+
+.recommand_citys {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 0.24rem;
+  padding-left: 0.15rem;
+  padding-right: 0.05rem;
+}
+
+.recommand_citys a {
+  width: 0.8rem;
+  height: 0.3rem;
+  display: block;
+  background-color: #f4f4f4;
+  line-height: 0.3rem;
+  float: left;
+  font-size: 0.12rem;
+  color: #333;
+  border-radius: 0.06rem;
+  margin-right: 0.08rem;
+  margin-bottom: 0.08rem;
+}
+
+.recommand_citys a:last-child {
+  font-size: 0.3rem;
+  line-height: 0.15rem;
+}
+
+.recommand_mid {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0.15rem;
+  padding-top: 0.2rem;
+  overflow: hidden;
+}
+
+.recommand_mid a {
+  color: #000;
+  font-size: 0.12rem;
+  position: relative;
+  float: left;
+  margin-right: 0.1rem;
+  margin-bottom: 0.08rem;
+}
+
+.recommand_mid a img {
+  width: 1.68rem;
+  height: 1.04rem;
+  display: block;
+  border-radius: 0.04rem;
+  filter: brightness(0.8);
+}
+
+.recommand_mid a p {
+  width: 0.34rem;
+  height: 0.16rem;
+  line-height: 0.16rem;
+  font-size: 0.1rem;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: -1.05rem;
+  background-color: #fc5446;
+  text-align: center;
+  border-top-left-radius: 0.04rem;
+}
+
+.recommand_mid a p::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: .16rem solid #fc5446;
+  border-right: .16rem solid transparent;
+  position: absolute;
+  left: 0.34rem;
+  top: 0;
+}
+
+.recommand_mid a h3 {
+  font-weight: 100;
+  color: white;
+  font-size: 0.12rem;
+  position: absolute;
+  left: 0.21rem;
+  bottom: 0.1rem;
+  width: 1.1rem;
+}
+
+.recommand_bot {
+  width: 100%;
+  height: 0.5rem;
+  text-align: center;
+}
+
+.recommand_bot a {
+  display: block;
+  color: #00a0ff;
+  font-size: 0.15rem;
+  line-height: 0.5rem;
+}
+
+.promise {
+  width: 100%;
+  color: #9f8a70;
+  background-color: white;
+  box-sizing: border-box;
+  padding-left: 0.32rem;
+  padding-top: 0.3rem;
+  overflow: hidden;
+}
+
+.promise li {
+  overflow: hidden;
+  margin-bottom: 0.2rem;
+}
+
+.promise i {
+  display: block;
+  float: left;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #f9f6f2;
+  text-align: center;
+  line-height: 0.4rem;
+  font-size: 0.24rem;
+  margin-right: 0.14rem;
+}
+
+.promise div {
+  float: left;
+}
+
+.promise p {
+  font-size: 0.12rem;
+  line-height: 0.14rem;
+  margin-bottom: 0.09rem;
+}
+
+.promise span {
+  display: block;
+  font-size: 0.1rem;
+  line-height: 0.1rem;
+}
+
+.mainPage footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.26rem;
+  overflow: hidden;
+}
+
+.foot_top {
+  overflow: hidden;
+}
+
+.foot_top a {
+  display: block;
+  font-size: 0.12rem;
+  color: #666;
+  float: left;
+}
+
+.foot_top a i {
+  font-size: 0.24rem;
+  color: #999;
+  margin-bottom: 0.08rem;
+}
+
+.foot_top a p {
+  padding-bottom: 0.08rem;
+}
+
+.foot_top a:first-child {
+  margin-left: 0.4rem;
+}
+
+.foot_top a:nth-child(2) {
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+.foot_mid {
+  overflow: hidden;
+  padding-top: 0.17rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.foot_mid a {
+  color: #999;
+  font-size: 0.12rem;
+  border-right: 1px solid #ccc;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+.foot_mid a:last-child {
+  border-right: none;
+}
+
+.foot_bot {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.23rem;
+  color: #999;
+  font-size: 0.1rem;
+}

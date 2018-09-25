@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>同程旅游---首页</title>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="cityPage" id="cityPage" style="display:none;">
+        <div class="city_top">
+            <div class="citysearch" >
+                <input type="text"  id="searchCity" placeholder="中文/拼音/首字母"> 
+                <i class="iconfont icon-sousuo"></i>
+                <i class="iconfont icon-quxiao" ></i>
+                <span id="clearInputVal">取消</span>            
+            </div> 
+            <div class="cityList" id="cityList" style="display:none;">
+                <span></span>
+                <p>西安</p>
+            </div>
+        </div>
+        <div class="city_con" id="city_con">
+            <div class="city_slide">
+                <a href="#current">当前</a>
+                <a href="#hot">热门</a>
+                <a href="#city-A">A</a>
+                <a href="#city-B">B</a>
+                <a href="#city-C">C</a>
+                <a href="#city-D">D</a>
+            </div>
+            <h3 class="city_tit" id="current">当前</h3>
+            <p class="gps">位置信息不可用(点击重试)</p>
+            <h3 class="city_tit" id="hot">热门</h3>
+            <div class="cityName">
+                <p>北京</p><p>上海</p><p>广州</p><p>深圳</p><p>杭州</p><p>西安</p><p>香港</p>
+            </div>
+            <h3 class="city_tit" id="city-A">A</h3>
+            <div class="cityName">
+                <p>安庆</p><p>安阳</p><p>阿坝</p><p>鞍山</p><p>安顺</p><p>安康</p><p>阿克苏</p>
+            </div>
+            <h3 class="city_tit" id="city-B">B</h3>
+            <div class="cityName">
+                <p>安庆</p><p>安阳</p><p>阿坝</p><p>鞍山</p><p>安顺</p><p>安康</p><p>阿克苏</p>
+            </div>
+            <h3 class="city_tit" id="city-C">C</h3>
+            <div class="cityName">
+                <p>安庆</p><p>安阳</p><p>阿坝</p><p>鞍山</p><p>安顺</p><p>安康</p><p>阿克苏</p>
+            </div>
+            <h3 class="city_tit" id="city-D">D</h3>
+            <div class="cityName">
+                <p>安庆</p><p>安阳</p><p>阿坝</p><p>鞍山</p><p>安顺</p><p>安康</p><p>阿克苏</p>
+            </div>
+        </div>
+    </div>
+    <div class="mainPage" id="mainPage" >
+        <header>
+            <div class="cityBox" id="cityBox">
+                <span>西安</span>
+                <i class="iconfont icon-jiantou-copy-copy"></i>
+            </div>
+            <div class="main_search">
+                <p>
+                    <i class="iconfont icon-sousuo"></i>
+                    <span>目的地/酒店/景点/关键字</span>
+                </p>      
+            </div>
+            <div class="user">
+                <a href="my.html"><i class="iconfont icon-user"></i></a>
+            </div>
+        </header>
+        <section>
+            <div class="gellay">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-Image:url(img/index_lunbo1.jpg)"></div>
+                    <div class="swiper-slide" style="background-Image:url(img/index_lunbo2.jpg)"></div>
+                    <div class="swiper-slide" style="background-Image:url(img/index_lunbo3.jpg)"></div>
+                    <div class="swiper-slide" style="background-Image:url(img/index_lunbo4.jpg)"></div>
+                    <div class="swiper-slide" style="background-Image:url(img/index_lunbo5.jpg)"></div>
+                    </div>
+                        <!-- Add Pagination -->
+                    <div class="swiper-pagination "></div>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="javascript:void(0)">
+                    <img src="img/index_menu1.png"/>
+                    <p>火车票</p>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="img/index_menu2.png"/>
+                    <p>机票</p>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="img/index_menu3.png"/>
+                    <p>酒店住宿</p>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="img/index_menu4.png"/>
+                    <p>景点门票</p>
+                </a>
+            </div>
+            <div class="subMenu">
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu1.png"/>
+                    <p>汽车票·船票</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu2.png"/>
+                    <p>周边自由行</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu6.png"/>
+                    <p>周边跟团游</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu4.png"/>
+                    <p>国内游</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu7.png"/>
+                    <p>油轮</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu8.png"/>
+                    <p>出境游</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu9.png"/>
+                    <p>海外玩乐</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu10.png"/>
+                    <p>签证</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu5.png"/>
+                    <p>全球WIFI</p>
+                </a> 
+                <a href="javascript:void(0)">
+                    <img src="img/index_submenu3.png"/>
+                    <p>全部服务</p>
+                </a> 
+            </div>
+            <div class="hotsale">
+                <a href="javascript:void(0)">
+                    <div class="intro">
+                        <h3>1元玩景点</h3>
+                        <p>PLUS会员</p>
+                    </div>
+                    <img src="img/index_dimond.png" />
+                </a>
+                <a href="javascript:void(0)">
+                    <div class="intro">
+                        <h3>出境特卖</h3>
+                        <p>每日上新</p>
+                    </div>
+                    <img src="img/index_newAday.png" />
+                </a>
+            </div>
+            <a class="banner"></a>
+            <div class="recommand">
+              <div class="recommand_top">
+                  <h3>热门推荐</h3>
+                  <div class="recommand_citys">
+                    <a href="javascript:void(0)">西安</a>
+                    <a href="javascript:void(0)">西安</a>
+                    <a href="javascript:void(0)">西安</a>
+                    <a href="javascript:void(0)">西安</a>
+                    <a href="javascript:void(0)">西安</a>
+                    <a href="javascript:void(0)">西安</a>
+                    <a href="javascript:void(0)">西安</a>
+                    <a href="javascript:void(0)">...</a>
+                  </div>
+              </div>  
+              <div class="recommand_mid">
+                <a href="javascript:void(0)">
+                    <img src="img/haidao.jpg"/>
+                    <p>海岛</p>
+                    <h3>适合秋冬出游的海岛</h3>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="img/haidao.jpg"/>
+                    <p>海岛</p>
+                    <h3>适合秋冬出游的海岛</h3>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="img/haidao.jpg"/>
+                    <p>海岛</p>
+                    <h3>适合秋冬出游的海岛</h3>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="img/haidao.jpg"/>
+                    <p>海岛</p>
+                    <h3>适合秋冬出游的海岛</h3>
+                </a>
+              </div>  
+              <div class="recommand_bot">
+                <a href="javascript:void(0)">查看更多玩法</a>
+              </div>  
+            </div>
+            <ul class="promise">
+                <li>
+                    <i class="iconfont icon-money"></i>
+                    <div class="promise_msg">
+                        <p>价格公正</p>
+                        <span>价格公开透明，请安心购买</span>
+                    </div>
+                </li>
+                <li>
+                    <i class="iconfont icon-ziyuan"></i>
+                <div class="promise_msg">
+                    <p>价格公正</p>
+                    <span>价格公开透明，请安心购买</span>
+                </div>
+            </li>
+            <li>
+                <i class="iconfont icon-zuanshi"></i>
+                <div class="promise_msg">
+                    <p>价格公正</p>
+                    <span>价格公开透明，请安心购买</span>
+                </div>
+            </li>
+            <li>
+                <i class="iconfont icon-kefu"></i>
+                <div class="promise_msg">
+                    <p>价格公正</p>
+                    <span>价格公开透明，请安心购买</span>
+                </div>
+            </li>
+            </ul>
+            <footer>
+                <div class="foot_top">
+                <a href="javascript:void(0)">
+                    <i class="iconfont icon-iconfontdianhua3"></i>
+                    <p>客服电话</p>
+                </a>
+                <a href="javascript:void(0)">
+                    <i class="iconfont icon-phone"></i>
+                    <p>下载客户端</p>
+                </a>
+                <a href="javascript:void(0)">
+                    <i class="iconfont icon-user"></i>
+                    <p>我的同程</p>
+                </a>
+            </div>
+            <div class="foot_mid">
+                <a href="javascript:void(0)">电脑版</a>
+                <a href="javascript:void(0)">简体中文</a>
+                <a href="javascript:void(0)">投诉建议</a>
+            </div>
+            <p class="foot_bot">&copy;2018 SZY</p>
+            </footer>
+        </section>
+        
+    </div>
+</body>
+</html>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    $(document).ready(function () {
+        //首页点击地区进入地区选择页面
+        $("#cityBox").on("click", function () {
+            let CityBox=($("#cityPage").css("display")=="none");
+            if(CityBox){
+                $("#cityPage").css({
+                    "left":$(window).width()+1,
+                    "position":"absolute",
+                    "display":"block"
+                });
+                $("#cityPage").animate({"left":0},200);
+                $("#mainPage").hide(); 
+            }
+        });
+        //点击input框的取消清空内容
+        $("#clearInputVal").on("click", function () {
+            console.log("123")
+            $("#searchCity").val("");
+            $("#cityList").css("display","none");
+            $("#city_con").css("display","block");
+        });
+        $("#searchCity").focus(function (e) { 
+            e.preventDefault();
+            $("#city_con").css("display","none");
+            let citys=[];
+            $.each($(".cityName p"), function (indexInArray, valueOfElement) { 
+                citys.push(this.innerHTML);
+            });
+            console.log(citys);
+            $("#cityList").css("display","block");
+            
+        });
+        //点击回到首页
+        $(".cityName p").on("click", function () {
+            $("#cityPage").attr("data-city",this.innerHTML);
+            $("#cityPage").css({"position":"absolute","z-index":9});
+            $("#cityPage").animate({"left":$(window).width()+1},200,function(){
+                $("#cityPage").css({
+                    "display":"none",
+                    "left":"0"
+                });
+            });
+            $("#cityBox span").html(this.innerHTML);
+            $("#mainPage").show(); 
+        });
+        
+        $(document).on("click", function (e) {
+            let ev=e||window.event;
+            if(e.target.tagName.toLocaleLowerCase()=="body"&&
+            $("#cityList").css("display")=="block"){
+                $("#cityList").css("display","none");
+                $("#city_con").css("display","block");
+            }
+        });
+ 
+    });
+ window.onload=function(){
+    var swiper = new Swiper('.swiper-container',{
+        pagination: {
+            el: ' .swiper-pagination ',
+            clickable: true
+        },
+        // effect:"fade",
+        loop: true,
+        autoplay:true,
+        spaceBetween: 200,
+        speed:300
+    });
+
+}
+
+</script>

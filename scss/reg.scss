@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+@function pxTorem($px){
+    @return ( $px / 100 ) * 1rem; 
+}
+$border: 1px solid #eee;
+html{
+    font-size: 26.67vw;
+    height: 100%;
+}
+body{
+    height: 100%;
+    background: white;
+}
+header{
+    width: 100%;
+    height: pxTorem(44);
+    border-bottom: $border;
+    .back{
+        display: block;
+        float: left;
+        width: pxTorem(44) ;
+        height: pxTorem(44) ;
+        background: url(../img/back.png) no-repeat left center;
+        background-size: 38% 38%;
+        margin-left:pxTorem(15) ;
+    }
+    h3{
+        float: left;
+        font-size: pxTorem(18) ;
+        text-align: center;
+        line-height: pxTorem(44);
+        width: 72.8%;
+    }
+}
+section{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: pxTorem(30);
+    padding-right: pxTorem(30);
+    padding-top: pxTorem(23);
+    position: relative;
+    input{
+        border: none;
+        border-bottom: $border;
+        width: 100%;
+        height:  pxTorem(60);
+        box-sizing: border-box;
+        padding-left: pxTorem(79);
+        display: block;
+    }
+    ::-webkit-input-placeholder{
+        color: #ccc;
+        font-size: pxTorem(18);
+        line-height: pxTorem(60);
+
+    }
+    p{
+        width: pxTorem(42);
+        font-size: pxTorem(16);
+        color: #333;
+        line-height: pxTorem(60);
+        position: absolute;
+        text-align: left;
+        background: url(../img/angle1.png) no-repeat right center;
+        background-size:  pxTorem(8)  pxTorem(5) ;
+        left:  pxTorem(31);
+        top: pxTorem(23);
+    }
+    button{
+        height:pxTorem(45);
+        width: 100%;
+        border-radius:  pxTorem(4);
+        background-color: #ff5346;
+        margin-top:  pxTorem(21);
+        display: block;
+        border:none;
+        text-align: center;
+        color: white;
+        font-size: pxTorem(18);
+    }
+}
+footer{
+    margin-top:108.8%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;    
+    a{
+        display: block;
+        float: left;
+        padding: 0 .1rem;
+        color: #999;
+        font-size: pxTorem(12); 
+        border-right: 1px solid #ccc;
+    }
+    a:last-child{
+        border-right: none;
+
+    }
+}
+.copy{
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-size: pxTorem(12);
+    padding-top: pxTorem(12);
+}

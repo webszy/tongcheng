@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+@function pxTorem($px){
+    @return ( $px / 100 ) * 1rem; 
+}
+html{
+    font-size: 26.67vw;
+    height: 100%;
+}
+
+
+body{
+    height: 100%;
+    background-color: #edf0f5;
+}
+header{
+    width: 100%;
+    height:pxTorem(44) ;
+    background: white;
+    padding-right:pxTorem(15); 
+    padding-left:pxTorem(15); 
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    .back{
+        display: block;
+        float: left;
+        width: pxTorem(44) ;
+        height: pxTorem(44) ;
+        background: url(../img/back.png) no-repeat left center;
+        background-size: 38% 38%;
+    }
+    h3{
+        float: left;
+        font-size: pxTorem(18) ;
+        text-align: center;
+        line-height: pxTorem(44);
+        width: 72.8%;
+
+    }
+    h3+p{
+        float: right;
+        font-size: pxTorem(30) ;
+        line-height: pxTorem(26);
+        letter-spacing: pxTorem(2);
+        color: #23beae;
+    }
+}
+.subMenu{
+   width:  pxTorem(132); 
+   height: pxTorem(146);
+   background-color: rgb(67,73,80);
+   border-radius: pxTorem(5);
+   position: absolute;
+   right:  pxTorem(5);
+   top: pxTorem(44);
+   box-sizing: border-box;
+   padding-left:  pxTorem(15);
+   padding-top:  pxTorem(5);
+   display: none;
+    a{
+        width: 100%;
+        height: pxTorem(45);
+        color: #ccc;
+        display: block;
+        i{
+            display: block;
+            float: left;
+            font-size:pxTorem(20);
+            line-height: pxTorem(45);
+        }
+        p{
+            float: left;
+            font-size: pxTorem(18); 
+            line-height: pxTorem(45);
+            text-indent: pxTorem(8); 
+        }
+    }
+}
+.subMenu::before{
+    position: absolute;
+    right: pxTorem(10);
+    top:  pxTorem(-9);
+    content: "";
+    border-style: solid;
+    border-color: #434950 transparent;
+    border-width: 0 9px 9px;
+}
+.banner{
+    background-color: #00c8b3;
+    width: 100%;
+    height: 1rem;
+    display: block;
+    padding-right:  pxTorem(15);
+    box-sizing: border-box;
+
+    img:first-child{
+        display: block;
+        float: left;
+        width:pxTorem(60); 
+        height:pxTorem(60);
+        padding-top: pxTorem(20);
+        padding-left: pxTorem(20);
+    }
+    p{
+        color: white;
+        font-size: pxTorem(18); 
+        line-height: 1rem;
+        float: left;
+        text-indent:  pxTorem(10); 
+    }
+    img:nth-of-type(2) {
+        display: block;
+        float: left;
+        width:pxTorem(100); 
+        height:pxTorem(54); 
+        padding-left: 16%;
+        padding-top: pxTorem(30);
+    }
+   
+}
+
+.myorder{
+    width: 100%;
+    margin-bottom:  pxTorem(10);
+    .menu_icon{
+        color: #00c8b3;
+    }
+}
+.giftInfo{
+    @extend .myorder ;
+    .menu_icon{
+        font-size:  pxTorem(30);
+        color: #cbd6e7;
+    }
+    .menu:last-child{
+        border-bottom: none;
+    }
+}
+.userInfo{
+    @extend .myorder ; 
+    .menu_icon{
+        font-size:  pxTorem(30);
+        color: #cbd6e7;
+    }
+    .menu:last-child{
+        border-bottom: none;
+    }
+}
+.menu{
+    display: block;
+    width: 100%;
+    height: pxTorem(43);
+    box-sizing: border-box;
+    padding-left: pxTorem(15);
+    padding-right:  pxTorem(15);
+    background-color: white;
+    color: #333;
+    font-size: pxTorem(14);
+    border-bottom: 1px solid #f2f2f2;
+    p{
+        font-size: pxTorem(14);
+        line-height: pxTorem(43); 
+        text-indent:  pxTorem(15);
+        width: 30%;
+        float: left;
+    }
+    span{
+      display: block;
+      line-height: pxTorem(43); 
+      float: right;
+      font-size: pxTorem(10);
+      color: #999;
+      margin-right: pxTorem(18);
+    }
+    .arrow_right{
+        color: #bbb;
+        line-height:pxTorem(43); 
+    }
+}
+.menu_icon{
+    float: left;
+    display: block;
+    line-height: pxTorem(43);
+    font-size:  pxTorem(24);
+}
+.arrow_right{
+    display: block;
+    line-height: 1rem;
+    font-size: pxTorem(24); 
+    float: right;
+    color: rgba(255,255,255,.8);
+}
+
+footer{
+    overflow: hidden;
+    padding-top:pxTorem(32);
+    display:flex;
+    justify-content:center;
+   a{
+        color: #999;
+        font-size:  pxTorem(12);
+        border-right: 1px solid #ccc;
+        padding-left:  pxTorem(8);
+        padding-right:  pxTorem(8);
+    } 
+    a:last-child{
+        border-right: none;
+
+    }
+}
+.copy{
+    width: 100%;
+    text-align: center;
+    padding-top: pxTorem(23);
+    color: #999;
+    font-size: pxTorem(10);
+    padding-top: pxTorem(14);
+}

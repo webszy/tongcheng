@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+@function pxTorem($px){
+    @return ( $px / 100 ) * 1rem; 
+}
+$border: 1px solid #eee;
+@mixin intiBox($width,$height){
+  @if $width == 0 {
+      width: 100%;
+
+  }
+  @else{
+      width: pxTorem($width);
+  }
+  @if $height == 0{
+      height: auto;
+  }@else{
+      height: pxTorem($height);
+  }
+}
+@mixin MyPadding($top,$right,$bottom,$left){
+  @if $top > 0 {
+      padding-top:  pxTorem($top);
+  }
+  @if $right > 0 {
+      padding-right:  pxTorem($right);
+  }
+  @if $bottom > 0 {
+      padding-bottom:  pxTorem($bottom);
+  }
+  @if $left > 0 {
+      padding-left:  pxTorem($left);
+  }
+}
+html{
+    font-size: 26.67vw;
+    height: 100%;
+}
+body{
+    height: 100%;
+    background: #edf0f5;
+}
+header{
+    width: 100%;
+    height: pxTorem(44);
+    border-bottom: $border;
+    margin-bottom: pxTorem(5);
+    background-color: white;
+    .back{
+        display: block;
+        float: left;
+        width: pxTorem(44) ;
+        height: pxTorem(44) ;
+        background: url(../img/back.png) no-repeat left center;
+        background-size: 38% 38%;
+        margin-left:pxTorem(15) ;
+    }
+    h3{
+        float: left;
+        font-size: pxTorem(18) ;
+        text-align: center;
+        line-height: pxTorem(44);
+        width: 72.8%;
+    }
+}
+section{
+  width: 97.34%;
+  margin: 0 auto;
+  // height: pxTorem(100);
+  background-color: white;
+  box-sizing: border-box;
+  @include MyPadding(10,10 ,21,10 );
+  margin-bottom: pxTorem(10);
+  overflow: hidden;
+}
+.sec_tit{
+  overflow: hidden;
+  color:#a2a2a2;
+  font-size: pxTorem(14);
+  margin-bottom: pxTorem(14);
+  p:first-of-type{
+    float: left;
+  }
+  p:last-of-type{
+    float: right;
+  }
+}
+.citys{
+  overflow: hidden;
+  padding-bottom: pxTorem(14);
+  border-bottom: .02rem solid #fafafa;
+
+  p{
+    color: #333;
+    font-size: pxTorem(22);
+    font-weight: 600;
+  }
+  p:first-of-type{
+    float: left;
+    margin-right: pxTorem(110);
+  }
+  p:last-of-type{
+    float: right;
+  }
+  i{
+    display: block;
+    float: left;
+    color: #5acec2;
+    border-radius: 50%;
+    border:1px solid #d3f2ef; 
+    @include intiBox(30,30 );
+    font-size: pxTorem(20);
+    text-align: center;
+    line-height: pxTorem(30);
+
+  }
+}
+.date{
+  overflow: hidden;
+  padding-bottom: pxTorem(17);
+  padding-top: pxTorem(14);
+  border-bottom: .02rem solid #fafafa;
+  p{
+    color: #333;
+    font-size: pxTorem(18);
+    float: left;
+  }
+  span{
+    float: left;
+    // display: block;
+    font-size: pxTorem(12);
+    color: #a2a2a2;
+    padding-top: pxTorem(6);
+    padding-left: pxTorem(9);
+  }
+}
+.checks{
+  overflow: hidden;
+  margin-bottom: pxTorem(16);
+  p{
+    font-size: pxTorem(10);
+    color: #666;
+    overflow: hidden;
+    font-size: pxTorem(14);
+    display: flex;
+    align-items: center;
+    i{
+      display: inline-block;
+      @include intiBox(14,14);
+      border: 1px solid #dadada;
+      margin-left: .02rem;
+  
+    }
+  }
+  
+  p:first-of-type{
+    float: left;
+  }
+  p:last-of-type{
+    float: right;
+
+  }
+}
+.search{
+  width:96.52%;
+  height: pxTorem(48);
+  border-radius: pxTorem(24);
+  background-color: #23beae;
+  font-size: pxTorem(18);
+  line-height: pxTorem(48);
+  text-align: center; 
+  margin: 0 auto;
+  color: white;
+
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding-top: pxTorem(10);
+  padding-bottom: pxTorem(10);
+  div{
+    img{
+      display: block;
+      @include intiBox(30,30);
+
+    }
+    p{
+      font-size: pxTorem(14);
+      color: #666;
+    }
+  }
+}

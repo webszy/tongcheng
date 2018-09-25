@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>同程---登陆</title>
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <header>
+        <p  class="header_border">验证码登录</p>
+        <p>账号密码登录</p>
+    </header>
+    <section>
+        <input type="text"  id="username" class="inputs" placeholder="请输入手机号码">
+        <p>+86</p>
+        <input type="password"  id="password" class="inputs"  placeholder="请输入手机验证码">
+        <p>验证码</p>
+        <a href="javascript:void(0)">获取验证码</a>
+        <span id="showpass" style="display:none;"></span>
+        <button>登陆</button>    
+</section>
+<div class="reg">
+    <a href="javascript:void(0)" class="forget">忘记密码</a>
+    <a href="reg.html">注册</a>
+</div>
+<footer>
+    <a href="javascript:void(0)">关于同程</a>
+    <a href="javascript:void(0)">意见反馈</a>
+    <a href="javascript:void(0)">客服电话</a>
+</footer>
+<p class="copy">&copy;2018 SZY</p>
+
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+    $("header p").on("click", function () {
+        $(this).addClass("header_border").siblings().removeClass("header_border");
+        if($(".header_border").html()=="账号密码登录"){
+            $(".forget").css("display","block");
+            $("section a").css("display","none");
+            $("#showpass").css("display","block");
+            $("section p:last").html("密码");
+            $("section input:first").attr("placeholder","请输入手机号码或邮箱");
+            $("section input:last").attr("placeholder","请输入密码");  
+        }else{
+            $(".forget").css("display","none");
+            $("section a").css("display","block");
+            $("#showpass").css("display","none");
+            $("section p:last").html("验证码");
+            $("section input:first").attr("placeholder","请输入手机号码");
+            $("section input:last").attr("placeholder","请输入验证码");
+        }
+
+    });
+    $("#showpass").click(function (e) { 
+        e.preventDefault();
+        if( $("#password").prop("type")=="password"){
+            $("#password").prop("type","text");
+            $("#showpass").css("background-image","url(img/text.png)")
+        }else{
+            $("#password").prop("type","password");
+            $("#showpass").css("background-image","url(img/password.png)")
+        }
+    });
+</script>

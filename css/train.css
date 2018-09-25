@@ -1,0 +1,179 @@
+html {
+  font-size: 26.67vw;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #edf0f5;
+}
+
+header {
+  width: 100%;
+  height: 0.44rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.05rem;
+  background-color: white;
+}
+
+header .back {
+  display: block;
+  float: left;
+  width: 0.44rem;
+  height: 0.44rem;
+  background: url(../img/back.png) no-repeat left center;
+  background-size: 38% 38%;
+  margin-left: 0.15rem;
+}
+
+header h3 {
+  float: left;
+  font-size: 0.18rem;
+  text-align: center;
+  line-height: 0.44rem;
+  width: 72.8%;
+}
+
+section {
+  width: 97.34%;
+  margin: 0 auto;
+  background-color: white;
+  box-sizing: border-box;
+  padding-top: 0.1rem;
+  padding-right: 0.1rem;
+  padding-bottom: 0.21rem;
+  padding-left: 0.1rem;
+  margin-bottom: 0.1rem;
+  overflow: hidden;
+}
+
+.sec_tit {
+  overflow: hidden;
+  color: #a2a2a2;
+  font-size: 0.14rem;
+  margin-bottom: 0.14rem;
+}
+
+.sec_tit p:first-of-type {
+  float: left;
+}
+
+.sec_tit p:last-of-type {
+  float: right;
+}
+
+.citys {
+  overflow: hidden;
+  padding-bottom: 0.14rem;
+  border-bottom: .02rem solid #fafafa;
+}
+
+.citys p {
+  color: #333;
+  font-size: 0.22rem;
+  font-weight: 600;
+}
+
+.citys p:first-of-type {
+  float: left;
+  margin-right: 1.1rem;
+}
+
+.citys p:last-of-type {
+  float: right;
+}
+
+.citys i {
+  display: block;
+  float: left;
+  color: #5acec2;
+  border-radius: 50%;
+  border: 1px solid #d3f2ef;
+  width: 0.3rem;
+  height: 0.3rem;
+  font-size: 0.2rem;
+  text-align: center;
+  line-height: 0.3rem;
+}
+
+.date {
+  overflow: hidden;
+  padding-bottom: 0.17rem;
+  padding-top: 0.14rem;
+  border-bottom: .02rem solid #fafafa;
+}
+
+.date p {
+  color: #333;
+  font-size: 0.18rem;
+  float: left;
+}
+
+.date span {
+  float: left;
+  font-size: 0.12rem;
+  color: #a2a2a2;
+  padding-top: 0.06rem;
+  padding-left: 0.09rem;
+}
+
+.checks {
+  overflow: hidden;
+  margin-bottom: 0.16rem;
+}
+
+.checks p {
+  font-size: 0.1rem;
+  color: #666;
+  overflow: hidden;
+  font-size: 0.14rem;
+  display: flex;
+  align-items: center;
+}
+
+.checks p i {
+  display: inline-block;
+  width: 0.14rem;
+  height: 0.14rem;
+  border: 1px solid #dadada;
+  margin-left: .02rem;
+}
+
+.checks p:first-of-type {
+  float: left;
+}
+
+.checks p:last-of-type {
+  float: right;
+}
+
+.search {
+  width: 96.52%;
+  height: 0.48rem;
+  border-radius: 0.24rem;
+  background-color: #23beae;
+  font-size: 0.18rem;
+  line-height: 0.48rem;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+footer div img {
+  display: block;
+  width: 0.3rem;
+  height: 0.3rem;
+}
+
+footer div p {
+  font-size: 0.14rem;
+  color: #666;
+}

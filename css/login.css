@@ -1,0 +1,175 @@
+html {
+  font-size: 26.67vw;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: white;
+}
+
+header {
+  width: 100%;
+  height: 0.49rem;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+header p {
+  position: absolute;
+  height: 0.48rem;
+  line-height: 0.46rem;
+  font-size: 0.16rem;
+  color: #666;
+  text-align: center;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+header p:first-child {
+  left: 12%;
+}
+
+header p:last-child {
+  left: 51.87%;
+}
+
+.header_border {
+  border-bottom: 0.02rem solid #23beae;
+  color: #23beae;
+}
+
+section {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.08rem;
+  position: relative;
+}
+
+section input {
+  border: none;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  height: 0.6rem;
+  box-sizing: border-box;
+  padding-left: 0.79rem;
+  display: block;
+}
+
+section ::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 0.16rem;
+  line-height: 0.6rem;
+}
+
+section p {
+  width: 0.42rem;
+  font-size: 0.16rem;
+  color: #333;
+  line-height: 0.6rem;
+  position: absolute;
+  text-align: left;
+}
+
+section p:first-of-type {
+  background: url(../img/angle1.png) no-repeat right center;
+  background-size: 0.08rem 0.05rem;
+  left: 0.31rem;
+  top: 0.08rem;
+}
+
+section p:last-of-type {
+  width: 0.5rem;
+  left: 0.31rem;
+  top: 0.68rem;
+}
+
+section a {
+  position: absolute;
+  line-height: 0.6rem;
+  color: #0185c6;
+  font-size: 0.14rem;
+  right: 0.3rem;
+  top: 0.68rem;
+}
+
+section button {
+  height: 0.45rem;
+  width: 100%;
+  border-radius: 0.04rem;
+  background-color: #ff5346;
+  margin-top: 0.23rem;
+  display: block;
+  border: none;
+  text-align: center;
+  color: white;
+}
+
+section span {
+  height: 0.6rem;
+  padding: 0 .3rem;
+  display: block;
+  position: absolute;
+  right: 0.3rem;
+  top: 0.68rem;
+  background-image: url(../img/password.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40% 40%;
+}
+
+.reg {
+  width: 100%;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.16rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.reg a {
+  color: #999;
+  font-size: 0.12rem;
+}
+
+.reg a:first-of-type {
+  float: left;
+}
+
+.reg a:last-of-type {
+  float: right;
+}
+
+.forget {
+  display: none;
+}
+
+footer {
+  margin-top: 87.2%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  display: block;
+  float: left;
+  padding: 0 .1rem;
+  color: #999;
+  font-size: 0.12rem;
+  border-right: 1px solid #ccc;
+}
+
+footer a:last-child {
+  border-right: none;
+}
+
+.copy {
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: 0.12rem;
+  padding-top: 0.12rem;
+}
